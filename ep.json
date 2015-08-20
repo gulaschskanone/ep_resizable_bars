@@ -1,0 +1,15 @@
+{
+  "parts":[
+    {
+      "name": "resizable_bars",
+      "hooks": {
+          "eejsBlock_scripts": "ep_resizable_bars/index",
+          "eejsBlock_styles": "ep_resizable_bars/index",
+          "clientVars": "ep_resizable_bars/index:clientVars"
+      },
+      "client_hooks": {
+        "postAceInit": "ep_resizable_bars/static/js/main:postAceInit"
+      }
+    }
+  ]
+}

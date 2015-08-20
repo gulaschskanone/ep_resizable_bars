@@ -1,0 +1,47 @@
+/*
+ * scale bar
+ */
+
+ .ui-resizable-e {
+	background: url(../image/resizable_row.png) repeat-y top right;
+	transform: scaleX(-1);
+ 	width: 36px;
+ 	right:0px;
+ 	/* margin-right: 20px;  avoid entering the iframe while fast mouse moving; better way?*/
+ 	cursor: auto;
+ }
+ 
+ .ui-resizable-e:after {
+ 	display: inline-block;
+ 	content: url(../image/resizable_fat.png);
+ 	cursor: e-resize;
+ }
+
+
+/*
+ * support for ep_table_of_contents
+ */
+#toc {
+	padding: 20px 50px 0 0;
+	overflow-y: auto !important;
+	background: #f7f7f7;
+}
+
+#tocItems {
+	padding: 0 0 0 10px !important;
+}
+
+.tocItem {
+	width: 100% !important;
+}
+
+
+
+/*
+ *support for ep_page_view
+ */ 
+iframe[name=ace_outer] {
+	padding-top:35px !important; 
+}
+
+
