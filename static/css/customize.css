@@ -1,20 +1,23 @@
 /*
- * scale bar
+ * resize bars
  */
 
- .ui-resizable-e {
+ .ui-resizable-e,  .ui-resizable-w {
 	background: url(../image/resizable_row.png) repeat-y top right;
-	transform: scaleX(-1);
- 	width: 36px;
+ 	width: 12px;
  	right:0px;
- 	/* margin-right: 20px;  avoid entering the iframe while fast mouse moving; better way?*/
  	cursor: auto;
  }
  
- .ui-resizable-e:after {
- 	display: inline-block;
- 	content: url(../image/resizable_fat.png);
+ .ui-resizable-e:after, .ui-resizable-w:after {
+ 	content: url(../image/resizable.png);
  	cursor: e-resize;
+ 	right: 0px;
+ 	position:absolute;
+ }
+ 
+ .ui-resizable-w {
+	transform: scaleX(-1);
  }
 
 
@@ -22,26 +25,67 @@
  * support for ep_table_of_contents
  */
 #toc {
-	padding: 20px 50px 0 0;
-	overflow-y: auto !important;
-	background: #f7f7f7;
+	padding: 0 !important;
+	overflow-y: hidden !important;
 }
 
 #tocItems {
-	padding: 0 0 0 10px !important;
+	margin-right:12px;
+	margin-top:4px;
+	padding: 0 0 0 10px;
+	overflow-y: auto;
+	height: -moz-calc(100% - 70px);
+    height: -webkit-calc(100% - 70px); 
+    height: calc(100% - 70px);
+    width:auto;
 }
 
 .tocItem {
-	width: 100% !important;
+	width: calc(100% - 10px) !important;
+}
+
+.toc_title, .editor_title, .users_title {
+  height:27px;
+  line-height:27px;
+  font-weight: bold;
+  color: #555;
+  font-size: 13px;
+  padding-left:10px;
+  /* border-bottom: 1px solid #ccc; */
+  background: #f7f7f7;
+  background: -webkit-linear-gradient(#f1f1f1, #f7f7f7 80%);
+  background: -moz-linear-gradient(#f1f1f1, #f7f7f7 80%);
+  background: -o-linear-gradient(#f1f1f1, #f7f7f7 80%);
+  background: -ms-linear-gradient(#f1f1f1, #f7f7f7 80%);
+  background: linear-gradient(#f1f1f1, #f7f7f7 80%);
 }
 
 
-
+ 
 /*
  *support for ep_page_view
  */ 
-iframe[name=ace_outer] {
-	padding-top:35px !important; 
+#editorcontainer > iframe {
+	height: -moz-calc(100% - 28px);
+    height: -webkit-calc(100% - 28px); 
+    height: calc(100% - 28px);
+}
+
+@media (min-width: 921px) {
+	#editorcontainer .page_view {
+    	padding-top: 28px !important;
+	}
+}
+
+@media (max-width: 920px) {
+	#editorcontainer {
+    	overflow: hidden;
+	}
 }
 
 
+
+/**
+ *  support for stickyChat
+ */
+/* ... */

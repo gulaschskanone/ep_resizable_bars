@@ -7,18 +7,21 @@ exports.postAceInit = function (hook_name, args, cb) {
 	/**
 	 * support for ep_table_of_contents
 	 */
-	// move TOC to the left to not overlap with chat bar
+	// fix: move TOC to the left to not overlap with chat bar
 	tableOfContents.enable = function(){
-		$('#toc').show().css({"width" : "200px", "left" : "0"});
-	   	$('#editorcontainer').css({"left" : "250px"});
+		$('#toc').show().css({"width" : "230px", "left" : "0"});
+	   	$('#editorcontainer').css({"left" : "230px"});
 	   	this.update();
-	   	$('iframe[name=ace_outer]').removeAttr("style"); 
 	}
 	tableOfContents.disable = function(){
 	   	$('#toc').hide();
 	   	$('#editorcontainer').css({"left" : "0"});
-	   	$('iframe[name=ace_outer]').attr("style", "padding-top:0px !important"); 
 	}
+	
+	// toc titlebar
+	$( "#toc" ).prepend("" +
+		"<div class='toc_title'>Gliederung</div>"
+	);
 
 	// trigger
 	if (!clientVars.toc_disable_by_default){	
@@ -30,22 +33,44 @@ exports.postAceInit = function (hook_name, args, cb) {
     	handles: "e",
     	// grid: 10,
     	maxWidth: 400,
-    	minWidth: 100,
+    	minWidth: 150,
     	resize: function( event, ui ) {
-    		var padleft = ui.size.width + 50;
+    		var padleft = ui.size.width; //  + 50
     		// var padleft = $("#toc").width()+20;
     		$('#editorcontainer').css({"left" : padleft+"px"});
-    		
     	}
     });
  
 
+    /**
+     * editor titlebar: avoid entering the iframe while fast mouse moving
+     * 
+     */
+	$( "#editorcontainer" ).prepend("" +
+			"<div class='editor_title'></div>"
+	);
     
-    
+	
 	/**
 	 * chatbox, user and chatbox+user
 	 */
-    // TODO
+	// users titlebar
+	/*
+	$( "#users" ).prepend("" +
+		"<div class='users_title'></div>"
+	);
+	*/
+	
+	// ...
 
 	
+	
+	
+	/** 
+	 * fix: init white stripe on right
+	 * geht das nur mir so?
+	 */
+	$( "#editorcontainer" ).css({"right" : "192px"});
 };
+
+
