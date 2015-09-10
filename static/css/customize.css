@@ -9,13 +9,15 @@
  	cursor: auto;
  }
  
- .ui-resizable-e:after, .ui-resizable-w:after {
+ .ui-resizable-e:hover:after, .ui-resizable-w:hover:after {
  	content: url(../image/resizable.png);
  	cursor: e-resize;
  	right: 0px;
  	position:absolute;
+
  }
  
+
  .ui-resizable-w {
 	transform: scaleX(-1);
  }
@@ -31,13 +33,13 @@
 
 #tocItems {
 	margin-right:12px;
-	margin-top:4px;
-	padding: 0 0 0 10px;
+	padding: 8px 0 0 10px;
 	overflow-y: auto;
 	height: -moz-calc(100% - 70px);
     height: -webkit-calc(100% - 70px); 
     height: calc(100% - 70px);
     width:auto;
+    background-color: #ffffff;
 }
 
 .tocItem {
@@ -77,15 +79,17 @@
 	}
 }
 
-@media (max-width: 920px) {
-	#editorcontainer {
-    	overflow: hidden;
-	}
+#editorcontainer {
+   	overflow: hidden;
 }
 
 
 
 /**
- *  support for stickyChat
+ *  support for chatbox
  */
+#chattext {
+    overflow-y: auto;
+}
+
 /* ... */

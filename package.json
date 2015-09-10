@@ -1,12 +1,11 @@
 {
   "name": "ep_resizable_bars",
-  "description": "ep_resizable_bars\r =======",
+  "description": "ep_resizable_bars\r ======= (development)",
   "version": "0.0.1",
   "author": "Christoph Becker <christoph.becker@uni-passau.de>",
-  "contributors": [],
-  "dependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "license": "ISC"
+  "contributors": [],  
+  "repository": {
+	    "type": "git",
+	    "url": "https://github.com/gulaschskanone/ep_resizable_bars.git"
+  }
 }
