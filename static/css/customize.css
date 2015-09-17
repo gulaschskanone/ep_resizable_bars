@@ -128,9 +128,10 @@
 	overflow-y: auto;
 	height: -moz-calc(100% - 70px);
     height: -webkit-calc(100% - 70px); 
-    height: calc(100% - 70px);
+    height: calc(100% - 73px);
     width:auto;
     background-color: #ffffff;
+    overflow-x: hidden;
 }
 
 .tocItem {
