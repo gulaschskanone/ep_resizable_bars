@@ -1,14 +1,16 @@
 {
   "name": "ep_resizable_bars",
   "description": "Makes chatbox and toc resizable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Christoph Becker <christoph.becker@uni-passau.de>",
-  "contributors": [{
-	  "name": "Simon Kollross",
-	  "email": "kollross@fim.uni-passau.de"
-  }],  
+  "contributors": [
+    {
+      "name": "Simon Kollross",
+      "email": "kollross@fim.uni-passau.de"
+    }
+  ],
   "repository": {
-	    "type": "git",
-	    "url": "https://github.com/gulaschskanone/ep_resizable_bars.git"
+    "type": "git",
+    "url": "https://github.com/gulaschskanone/ep_resizable_bars.git"
   }
 }
