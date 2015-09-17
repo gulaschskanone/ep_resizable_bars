@@ -1,26 +1,117 @@
 /*
  * resize bars
  */
-
  .ui-resizable-e,  .ui-resizable-w {
 	background: url(../image/resizable_row.png) repeat-y top right;
  	width: 12px;
  	right:0px;
  	cursor: auto;
+ 	z-index:501 !important;
  }
- 
+	
  .ui-resizable-e:hover:after, .ui-resizable-w:hover:after {
  	content: url(../image/resizable.png);
- 	cursor: e-resize;
+ 	cursor: pointer; /* e-resize; */
  	right: 0px;
  	position:absolute;
-
- }
  
+ 	-webkit-box-shadow: 5px 0px 5px 0px rgba(255,255,255,1);
+	-moz-box-shadow: 5px 0px 5px 0px rgba(255,255,255,1);
+	box-shadow: -1px 0px 10px 0px #f7f7f7;
+ }
 
  .ui-resizable-w {
 	transform: scaleX(-1);
  }
+
+
+/* 
+ * title bars
+ */
+.title {
+  height:27px;
+  line-height:27px;
+  font-weight: bold;
+  color: #555;
+  font-size: 13px;
+  padding-left:10px;
+  /* border-bottom: 1px solid #ccc; */
+  background: #f7f7f7;
+  background: -webkit-linear-gradient(#f1f1f1, #f7f7f7 80%);
+  background: -moz-linear-gradient(#f1f1f1, #f7f7f7 80%);
+  background: -o-linear-gradient(#f1f1f1, #f7f7f7 80%);
+  background: -ms-linear-gradient(#f1f1f1, #f7f7f7 80%);
+  background: linear-gradient(#f1f1f1, #f7f7f7 80%);
+  display:none;
+}
+
+#myswatchbox { 
+	top: 27px; 
+}
+
+#users_title {
+	padding-left:4px;
+}
+
+ 
+
+/**
+ *  chatbox
+ */
+#chattext {
+    overflow-y: auto;
+}
+
+#chatWrapper {
+	position: fixed;
+	top: 38px;
+	bottom: 0;
+	right: 0 !important;
+	width: 186px; /* init */
+	background: #f7f7f7;
+	z-index: 2;
+}
+
+#chatWrapper #users {
+	top: 0!important;
+	width: calc(100% - 17px) !important;
+	padding-top: 0px;
+	padding-bottom:10px;
+}
+
+#chatWrapper #chatbox.stickyChat {
+	top: 1px!important;
+	width: calc(100% - 17px) !important;
+}
+
+#chatWrapper #chatbox.stickyChat:not(.chatAndUsersChat) {
+	width: calc(100% - 13px) !important;
+}
+
+#chatWrapper #users:not(.chatAndUsers) {
+	width: 158px !important;
+	right: 5px;
+}
+
+
+/*
+ *support for ep_page_view
+ */ 
+#editorcontainer > iframe {
+	height: -moz-calc(100% - 28px);
+    height: -webkit-calc(100% - 28px); 
+    height: calc(100% - 28px);
+}
+
+@media (min-width: 921px) {
+	#editorcontainer .page_view {
+    	padding-top: 28px !important;
+	}
+}
+
+#editorcontainer {
+   	overflow: hidden;
+}
 
 
 /*
@@ -45,51 +136,3 @@
 .tocItem {
 	width: calc(100% - 10px) !important;
 }
-
-.toc_title, .editor_title, .users_title {
-  height:27px;
-  line-height:27px;
-  font-weight: bold;
-  color: #555;
-  font-size: 13px;
-  padding-left:10px;
-  /* border-bottom: 1px solid #ccc; */
-  background: #f7f7f7;
-  background: -webkit-linear-gradient(#f1f1f1, #f7f7f7 80%);
-  background: -moz-linear-gradient(#f1f1f1, #f7f7f7 80%);
-  background: -o-linear-gradient(#f1f1f1, #f7f7f7 80%);
-  background: -ms-linear-gradient(#f1f1f1, #f7f7f7 80%);
-  background: linear-gradient(#f1f1f1, #f7f7f7 80%);
-}
-
-
- 
-/*
- *support for ep_page_view
- */ 
-#editorcontainer > iframe {
-	height: -moz-calc(100% - 28px);
-    height: -webkit-calc(100% - 28px); 
-    height: calc(100% - 28px);
-}
-
-@media (min-width: 921px) {
-	#editorcontainer .page_view {
-    	padding-top: 28px !important;
-	}
-}
-
-#editorcontainer {
-   	overflow: hidden;
-}
-
-
-
-/**
- *  support for chatbox
- */
-#chattext {
-    overflow-y: auto;
-}
-
-/* ... */

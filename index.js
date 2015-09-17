@@ -12,6 +12,11 @@ exports.eejsBlock_styles = function (hook_name, args, cb) {
 	return cb();
 };
 
+exports.eejsBlock_body = function (hook_name, args, cb) {
+	args.content = args.content + eejs.require("ep_resizable_bars/templates/title.html", {}, module);
+	return cb();
+}
+
 exports.clientVars = function(hook, context, callback)
 {
 	// return the setting to the clientVars, sending the value

@@ -1,14 +1,11 @@
-ep_resizable_bars (under construction)
+ep_resizable_bars
 =======
 
-* supports ep_table_of_contents (moved to the left to not overlap with chat bar)
+Makes chatbox resizable.
 
-
-## todo ##
-* resizable chat and user bar
-* translations
-* add peerDependency "ep_table_of_contents" (0.1.6) to package.json
+* supports ep_table_of_contents (<=0.1.6: moved to the left to not overlap with chat bar)
+* supports ep_page_view
  
 
-## later ##
-* In fact "ep_table_of_contents" is a dependency. Terminate this.
+## dependencies ##
+* [yckart's jquery.observe](https://gist.github.com/yckart/c893d7db0f49b1ea4dfb#file-jquery-observe-js)
