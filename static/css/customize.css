@@ -6,23 +6,27 @@
  	width: 12px;
  	right:0px;
  	cursor: auto;
- 	z-index:501 !important;
+ 	/* z-index:400 !important; */
  }
 	
- .ui-resizable-e:hover:after, .ui-resizable-w:hover:after {
+ .ui-resizable-e:after, .ui-resizable-w:after { /* :hover:after */
  	content: url(../image/resizable.png);
  	cursor: pointer; /* e-resize; */
  	right: 0px;
  	position:absolute;
  
+ 	/*
  	-webkit-box-shadow: 5px 0px 5px 0px rgba(255,255,255,1);
 	-moz-box-shadow: 5px 0px 5px 0px rgba(255,255,255,1);
 	box-shadow: -1px 0px 10px 0px #f7f7f7;
+	*/
  }
 
- .ui-resizable-w {
+/*
+ .ui-resizable-e {
 	transform: scaleX(-1);
  }
+ */
 
 
 /* 
