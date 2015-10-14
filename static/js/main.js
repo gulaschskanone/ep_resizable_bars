@@ -99,7 +99,9 @@ exports.postAceInit = function (hook_name, args, cb) {
 	 */    
     if($('#options-toc').length > 0){
 	    var toc = $('#toc');
-	    var toc_title = $('#toc_title'); 
+	    var toc_title = $('#toc_title');
+	    var toc_items = $('#tocItems'); 
+		var toc_refresh = $('#toc_refresh');
 	    
 	    // titlebar
 		toc.prepend(toc_title);
@@ -133,6 +135,9 @@ exports.postAceInit = function (hook_name, args, cb) {
 	    		editorcontainer.css({"left" : padleft+"px"});
 	    	}
 	    });
+		
+		// refresh
+		toc_title.append(toc_refresh);
     }
  
 };

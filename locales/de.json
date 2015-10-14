@@ -1,5 +1,6 @@
 {
   "ep_resizable_bars.title.toc" : "Gliederung",
   "ep_resizable_bars.title.editor" : " ",
-  "ep_resizable_bars.title.users" : "Benutzer"
+  "ep_resizable_bars.title.users" : "Benutzer",
+  "ep_resizable_bars.refresh.title" : "aktualisieren"
 }

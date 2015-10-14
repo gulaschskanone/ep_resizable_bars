@@ -141,3 +141,12 @@
 .tocItem {
 	width: calc(100% - 10px) !important;
 }
+
+#toc_refresh {
+	width: 27px;
+	height: 27px;
+	background: url(../image/refresh.png) no-repeat 50% 50%;
+	right: 35px;
+	opacity:0.2;
+	position:absolute;
+}
