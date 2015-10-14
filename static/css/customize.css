@@ -127,8 +127,8 @@
 }
 
 #tocItems {
-	margin-right:12px;
-	padding: 8px 0 0 10px;
+	margin-right:10px;
+	padding: 8px 5px 0 10px;
 	overflow-y: auto;
 	height: -moz-calc(100% - 70px);
     height: -webkit-calc(100% - 70px); 
@@ -138,9 +138,12 @@
     overflow-x: hidden;
 }
 
-.tocItem {
-	width: calc(100% - 10px) !important;
-}
+.tocItem { width: 100% !important; }
+.tocItem.toch2 { width: calc(100% - 10px) !important; }
+.tocItem.toch3 { width: calc(100% - 20px) !important; }
+.tocItem.toch4 { width: calc(100% - 30px) !important; }
+.tocItem.toch5 { width: calc(100% - 40px) !important; }
+.tocItem.toch6 { width: calc(100% - 50px) !important; }
 
 #toc_refresh {
 	width: 27px;
