@@ -12,5 +12,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/gulaschskanone/ep_resizable_bars.git"
-  }
+  },
+  "license": "Apache-2.0"
 }

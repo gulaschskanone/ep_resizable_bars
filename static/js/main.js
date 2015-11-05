@@ -138,6 +138,7 @@ exports.postAceInit = function (hook_name, args, cb) {
 		
 		// refresh
 		toc_title.append(toc_refresh);
+		toc_refresh.show();
     }
  
 };
