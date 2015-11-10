@@ -1,7 +1,7 @@
 {
   "name": "ep_resizable_bars",
   "description": "Makes chatbox and toc resizable",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Christoph Becker <christoph.becker@uni-passau.de>",
   "contributors": [
     {
