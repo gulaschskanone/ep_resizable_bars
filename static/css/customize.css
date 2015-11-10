@@ -154,3 +154,10 @@
 	position:absolute;
 	display:none;
 }
+
+#myusernameedit, #otherusers {
+	overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    width: calc( 100% - 10px );
+}
