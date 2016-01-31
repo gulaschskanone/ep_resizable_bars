@@ -1,3 +1,5 @@
+**Note: Development was discontinued in 2015.**
+
 ep_resizable_bars
 =======
 
